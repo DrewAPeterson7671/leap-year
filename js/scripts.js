@@ -2,24 +2,31 @@ $(document).ready(function() {
 
   $("#userInput").submit(function() {
     event.preventDefault();
-    console.log(userYear);
+    // console.log(userYear);
 
 
     var userYear = $("input#userYear").val();
 
-    var leapYear = function(userYear) {
+    var leapYear = function(placeholder) {
 
-      if ( userYear % 4 === 0 || userYear % 400 === 0 && userYear % 100 !== 0)  {
+      if ( placeholder % 4 === 0 || (placeholder % 400 === 0 && placeholder % 100 !== 0))  {
 
         return true;
+      } else {
+        return false;
       }
     };
 
-console.log(leapYear(userYear));
 
-    if(leapYear() !== true){
+    if (!leapYear(userYear)){
+//(leapYear !== true)ß
+      console.log("test");
+
       $("#sad").show();
-    }else{
+      $("#happy").hide();
+    } else {
+      console.log("else");
+      $("#sad").hide();
       $("#happy").show();
     }
   });
