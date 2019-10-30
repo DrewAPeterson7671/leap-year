@@ -1,0 +1,22 @@
+
+html{
+  height: 100%;
+}
+  body {
+  background-image:repeating-radial-gradient(red,blue,green,yellow,red);
+  background-repeat: no-repeat;
+  height:100%;
+
+}
+img{
+  max-width: 50%;
+  max-height: 50%;
+
+}
+#happy{
+  display:none;
+}
+#sad{
+  display:none;
+
+}
